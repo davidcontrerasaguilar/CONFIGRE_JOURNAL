@@ -1,8 +1,12 @@
+# EXPERIMENTAL SETUP
+
+To run the recommendation models presented in the paper (i.e., six state-of-the-art Collaborative Filtering algorithms, namely **ItemKNN**, **UserKNN**, **BPR**, **SVD**, **VAECF**, and **NEUMF**), we used the Cornac framework, which generated the recommendations for each user and it generates consistently formatted lists that can be fed to CONFIGRE, P-Fair, and CP-Fair. In addition, datasets were randomly separated into a test set (20%) and a train set (80%).
+
+We have performed a grid search of the hyper-parameters for each recommendation model in the two datasets. For each user, we generated the *top-1000* recommendations (denoted in the paper as the top-𝑛) to then re-rank the *top-𝑘* (set up to 10) through the proposed CONFIGRE algorithm. To evaluate recommendation effectiveness, we measure the ranking quality of the lists by measuring the Normalized Discounted Cumulative Gain (NDCG)
+
 # Datasets Overview
 
 This repository contains four enriched datasets with geographical metadata for analysis in various domains. Each dataset is provided as a CSV file with detailed attributes relevant to its specific context.
-
-## How to
 
 ## 1. Movies Dataset (`movies.csv`)
 - **Filename**: `movies.csv`
@@ -36,3 +40,11 @@ This repository contains four enriched datasets with geographical metadata for a
 ### General Notes
 - Each CSV file is structured with headers reflecting the descriptions provided.
 - Users are advised to handle data responsibly, especially when linking to external APIs or resources.
+
+# CITATION
+If you use our source datasets, and experiments for your research or development, please cite the following paper
+
+
+# CONTACT
+If you have any questions, do not hesitate to contact us by david.contreras@salle.url.edu or egomezy109@gmail.com, we will be happy to assist.
+
